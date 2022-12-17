@@ -4,7 +4,9 @@ import { View, ScreenSpinner, AdaptivityProvider, AppRoot, ConfigProvider, Split
 import '@vkontakte/vkui/dist/vkui.css';
 
 import Home from './panels/Home';
-import Persik from './panels/Persik';
+import Selection from './panels/Selection';
+import Map from './panels/Map';
+
 
 const App = () => {
 	const [scheme, setScheme] = useState('bright_light')
@@ -39,7 +41,8 @@ const App = () => {
 						<SplitCol>
 							<View activePanel={activePanel}>
 								<Home id='home' fetchedUser={fetchedUser} go={go} />
-								<Persik id='persik' go={go} />
+								<Selection id='selection' go={go} />
+								<Map id='map' go={go} />
 							</View>
 						</SplitCol>
 					</SplitLayout>
