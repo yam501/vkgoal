@@ -11,7 +11,7 @@ const Map = props => (
 		</PanelHeader>
         <Group header={<Header mode="secondary">Пример</Header>}>
 			<Div>
-				<Button stretched size="l" mode="secondary" onClick={go} data-to="map">
+				<Button stretched size="l" onClick={go} data-to="map">
 					Show me the Persik, please
 				</Button>
 			</Div>

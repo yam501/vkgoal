@@ -1,0 +1,77 @@
+.header {
+    background: radial-gradient(63.84% 24387.4% at 50% 0%, #5070FB 20.83%, rgba(164, 45, 184, 0.48) 48.23%, rgba(87, 98, 252, 0.48) 96.15%, rgba(87, 98, 252, 0.48) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4px 16px;
+}
+
+.header span {
+    font-weight: bold;
+    color: white;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+
+.back {
+    background: radial-gradient(63.84% 24387.4% at 50% 0%, #5070FB 20.83%, rgba(164, 45, 184, 0.48) 48.23%, rgba(87, 98, 252, 0.48) 96.15%, rgba(87, 98, 252, 0.48) 100%);
+}
+
+.header_text {
+    align-items: center;
+    width: 705px;
+    height: 282px;
+    left: 1000px;
+    top: calc(50% - 282px/2 - 73px);
+    padding-top: 5%;
+    text-align: center;
+    font-family: 'Heebo', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 94px;
+
+    color: #252424;
+
+}
+
+.arrow-3 {
+    position: relative;
+    font-family: 'Heebo', sans-serif;
+    left: 50%;
+    transform: translate(-50%, 0);
+    color: #337AB7;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 18px;
+    padding-top: 3px;
+    padding-left: 4px;
+    height: 33px;
+    width: 180px;
+    line-height: 20px;
+    display: inline-block;
+    outline: 2px solid #337AB7;
+    border-radius: 5px;
+
+}
+
+.arrow-3 .arrow-3-icon {
+    position: relative;
+    top: -1px;
+    transition: transform 0.3s ease;
+    vertical-align: middle;
+}
+
+.arrow-3 .arrow-3-iconcircle {
+    transition: stroke-dashoffset .3s ease;
+    stroke-dasharray: 95;
+    stroke-dashoffset: 95;
+}
+
+.arrow-3:hover .arrow-3-icon {
+    transform: translate3d(5px, 0, 0);
+}
+
+.arrow-3:hover .arrow-3-iconcircle {
+    stroke-dashoffset: 0;
+}

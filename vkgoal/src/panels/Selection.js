@@ -1,22 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { Panel, PanelHeader, PanelHeaderBack } from '@vkontakte/vkui';
+import { Panel, PanelHeader, Header, Button, Group, Cell, Div, Avatar } from '@vkontakte/vkui';
 
-import selection from '../img/persik.png';
-import './Selection.css';
-
-const Selection = props => (
-	<Panel id={props.id}>
-		<PanelHeader>Возможности</PanelHeader>
-		<Group header={<Header mode="secondary">Пример</Header>}>
+const Selection = ({ id, go, fetchedUser }) => (
+	<Panel id={id}>
+		<Group header={<Header>Самое приятное - достичь своих целей</Header>}>
 			<Div>
-				<Button stretched size="l" mode="secondary" onClick={go} data-to="map">
-					Перейти дальше
+				<Button stretched size="l" onClick={go} data-to="selection">
+					Поставить цель 
 				</Button>
 			</Div>
 		</Group>
-		<img className="Selection" src={selection} alt="Persik The Cat"/>
 	</Panel>
 );
 
