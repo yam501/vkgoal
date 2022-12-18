@@ -1,8 +1,10 @@
 .select__page {
+    background-image: url('secBg.png');
+    background-size: cover;
     width: 900px;
     height: 600px;
     margin: auto;
-    border: 1px solid black;
+    /* border: 1px solid black; */
 }
 
 
@@ -34,13 +36,13 @@
     display: flex;
     position: relative;
     top: 100px;
-    left: 134px;
+    left: 70px;
 }
 
 .card_title {
     position: absolute;
     top: 190px;
-    left: 250px;
+    left: 182px;
     text-align: center;
 }
 
@@ -83,14 +85,19 @@
 }
 
 .select_form {
-    float: right;
+    /* float: right; */
+    position: relative;
+    top: 5px;
     margin-right: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items:flex-end;
 }
 
-.range{
+.nomer_scrollbar{
     width: 300px;
+    margin-bottom: 50px;
     height: 4px;
-    background-color: #5070FB;
+    background-color: #5070FB;   
 }
-
-

@@ -13,7 +13,7 @@ import './main.css';
 
 const App = () => {
 	const [scheme, setScheme] = useState('bright_light')
-	const [activePanel, setActivePanel] = useState('home');
+	const [activePanel, setActivePanel] = useState('map');
 	const [fetchedUser, setUser] = useState(null);
 	const [popout, setPopout] = useState();
 

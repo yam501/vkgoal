@@ -1,20 +1,24 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
-<<<<<<< HEAD
+import { useState } from 'react';
 import { Panel, PanelHeader, Header, Button, Group, Cell, Div, Avatar, text} from '@vkontakte/vkui';
-
-
+import { ReactComponent as DisplayIcon } from '../img/display.svg';
+import { ReactComponent as BrushIcon } from '../img/brush.svg';
+import { ReactComponent as BicycleIcon } from '../img/bicycle.svg';
+import './Map.css'
 
 const Map = (id, go) => {
 	const [active, setActive] = useState(0);
+	const [currentRange, setCurrentRange] = useState(100);
+	const [currentHourRange, setCurrentHourRange] = useState(24);
+	const [currentMinuteRange, setCurrentMinuteRange] = useState(60);
 	let cardTitle;
 	
 	const titleCard = () => {
 		if(active === 1) {
 			cardTitle = 'Программирование';
 		} else if (active === 0) {
-			cardTitle = 'Творчесвто';
+			cardTitle = 'Творчество';
 		} else {
 			cardTitle = 'Спорт';
 		}
@@ -35,55 +39,64 @@ const Map = (id, go) => {
 					<h1 className='card_title'>{cardTitle}</h1>
 				</div>
 				<div className='slider'>
-					<div 
+					<a href='./Selection.js'><div  
 					onMouseEnter={() => setActive(1)}
-					// onMouseOut={() => setActive(0)}
 					className= {`select_card ${active === 1 ? 'active' : ''}`}>
 						<DisplayIcon className="card__icon" height={40} width={40} fill="#000" />
-					</div>
-					<div 
+					</div></a>
+					<a href='./Selection.js'><div 
 						onMouseEnter={() => setActive(0)}
 						// onMouseOut={() => setActive(3)}
 						className= {`select_card ${active === 0 ? 'active' : ''}`}>
 						<BrushIcon className="card__icon" height={40} width={40} fill="#000" />
-					</div>
-					<div 
+					</div></a>
+					<a href='./Selection.js'><div 
 						onMouseEnter={() => setActive(2)}
 						// onMouseOut={() => setActive(5)}
 						className= {`select_card ${active === 2 ? 'active' : ''}`}>
 						<BicycleIcon className="card__icon" height={40} width={40} fill="#000" />
-					</div>
+					</div></a>
 					
 				</div>
 				<div className='select_form'>
-					<form className='form'>
-						<input type='range' min="1" max='365' className="range" oninput="rangenumber.value=value"/>
-  						<input type="number" id="rangenumber" min="1" max="365" step="1" value="45" oninput="range.value=value" />
+					<form className="nomer_scrollbar">
+						<label for='day'>Количество дней</label>
+						<input
+						value={currentRange}
+						onChange={e => setCurrentRange(e.target.value)} 
+						type='range' 
+						max='365' 
+						min='1' />
+						<span>{currentRange}</span>
 					</form>
+
+					<form className="nomer_scrollbar">
+						<label for='hour'>Количество часов</label>
+						<input
+						value={currentHourRange}
+						onChange={e => setCurrentHourRange(e.target.value)} 
+						type='range' 
+						max='24' 
+						min='1' />
+						<span>{currentHourRange}</span>
+					</form>
+
+					<form className="nomer_scrollbar">
+						<label for='minute'>Количество минут</label>
+						<input
+						value={currentMinuteRange}
+						onChange={e => setCurrentMinuteRange(e.target.value)} 
+						type='range' 
+						max='60' 
+						min='1' />
+						<span>{currentMinuteRange}</span>
+					</form>
+					<Button type='submit' className='btn_form'>Подтвердить</Button>
 				</div>
 			</div>
 		</Panel>
 	)
 }
-=======
-import { Panel, PanelHeader, Header, Button, Group, Cell, Div, Avatar } from '@vkontakte/vkui';
-
-const Map = props => (
-	<Panel id={props.id}>
-		<PanelHeader>
-            left={<PanelHeaderBack onClick={props.go} data-to="home"/>}
-			Карта, возможность добавить ментора, шаблон
-		</PanelHeader>
-        <Group header={<Header mode="secondary">Пример</Header>}>
-			<Div>
-				<Button stretched size="l" onClick={go} data-to="map">
-					Show me the Persik, please
-				</Button>
-			</Div>
-		</Group>
-	</Panel>
-);
->>>>>>> 06bd95efc9ac4e2f543016c30730b48514b58b16
 
 Map.propTypes = {
 	id: PropTypes.string.isRequired,
