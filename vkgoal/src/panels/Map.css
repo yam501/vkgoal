@@ -1,0 +1,96 @@
+.select__page {
+    width: 900px;
+    height: 600px;
+    margin: auto;
+    border: 1px solid black;
+}
+
+
+.select_card {
+    display: flex;
+    width: 100px;
+    height: 100px;
+    border: 1px solid rgba(1,1,1,.0);
+    border-radius: 50%;
+    background: linear-gradient(180deg, rgba(58, 132, 240, 0.3) 0%, rgba(27, 60, 99, 0.3) 100%);
+}
+
+.active {
+    width: 150px;
+    height: 150px;
+    background: linear-gradient(180deg, rgba(162, 120, 231, 0.5) 3.55%, rgba(25, 29, 131, 0.5) 96.72%);
+    
+}
+
+
+
+.card__icon {
+    margin: auto;
+}
+
+.slider {
+    width: fit-content;
+    margin-top: 120px;
+    display: flex;
+    position: relative;
+    top: 100px;
+    left: 134px;
+}
+
+.card_title {
+    position: absolute;
+    top: 190px;
+    left: 250px;
+    text-align: center;
+}
+
+
+
+.header {
+    background: radial-gradient(63.84% 24387.4% at 50% 0%, #5070FB 20.83%, rgba(164, 45, 184, 0.48) 48.23%, rgba(87, 98, 252, 0.48) 96.15%, rgba(87, 98, 252, 0.48) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4px 16px;
+}
+
+.header span {
+    font-weight: bold;
+    color: white;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+
+.back {
+    background: radial-gradient(63.84% 24387.4% at 50% 0%, #5070FB 20.83%, rgba(164, 45, 184, 0.48) 48.23%, rgba(87, 98, 252, 0.48) 96.15%, rgba(87, 98, 252, 0.48) 100%);
+}
+
+.header_text {
+    align-items: center;
+    width: 705px;
+    height: 282px;
+    left: 1000px;
+    top: calc(50% - 282px/2 - 73px);
+    padding-top: 5%;
+    text-align: center;
+    font-family: 'Heebo', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 94px;
+    padding-left: 15%;
+    color: #252424;
+}
+
+.select_form {
+    float: right;
+    margin-right: 40px;
+}
+
+.range{
+    width: 300px;
+    height: 4px;
+    background-color: #5070FB;
+}
+
+

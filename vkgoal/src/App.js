@@ -43,7 +43,7 @@ const App = () => {
 					<SplitLayout popout={popout}>
 						<SplitCol>
 							<View activePanel={activePanel}>
-								<Home id='home' fetchedUser={fetchedUser} go={go} />
+								<Home id='index' fetchedUser={fetchedUser} go={go} />
 								<Selection id='selection' go={go} />
 								<Map id='map' go={go} />
 							</View>
