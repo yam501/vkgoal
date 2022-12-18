@@ -5,7 +5,7 @@ import { Panel, PanelHeader, Header, Button, Group, Cell, Div, Avatar, text} fro
 import { ReactComponent as DisplayIcon } from '../img/display.svg';
 import { ReactComponent as BrushIcon } from '../img/brush.svg';
 import { ReactComponent as BicycleIcon } from '../img/bicycle.svg';
-import { useState } from 'react';
+// import { UseState } from 'react';
 import './Map.css';
 const Map = (id, go) => {
 	const [active, setActive] = useState(0);
@@ -91,7 +91,7 @@ const Map = (id, go) => {
 						min='1' />
 						<span>{currentMinuteRange}</span>
 					</form>
-					<Button type='submit' className='btn_form'>Подтвердить</Button>
+					<button type='submit' className='btn_form' data-to="selection" onClick={go}>Подтвердить</button>
 				</div>
 			</div>
 		</Panel>

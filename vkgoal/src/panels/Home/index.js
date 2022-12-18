@@ -19,8 +19,8 @@ const Home = ({ id, go, fetchedUser }) => {
 		<div className='main-container'>
 			<img className='main-container__bg' src={bg_url} />
 			<h1 className='main-container__title'>Самое приятное - достичь своих целей</h1>
-			<span data-to="selecton" onClick={go}>
-				<div data-to="map" onClick={go} className="cum-btn">
+			<span data-to="map" onClick={go}>
+				<div  className="cum-btn">
 					<span>Поставить цель</span>
 					<PlayIcon
 						style={{ transform: "translateY(1px)" }}

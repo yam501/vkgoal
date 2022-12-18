@@ -1,13 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import './Selection.css';
-
+// import { useState } from 'react';
 import { ReactComponent as PlayIcon } from './arrow.svg';
 import { Panel } from '@vkontakte/vkui';
 import bg_1 from '../img/bg_1.png'
 
 import MyButton from '../components/MyButton';
+// const [days, setDays] = UseState(`День ${days}`);
 
+// const ro
 
 
 const Selection = (id, go) => {
