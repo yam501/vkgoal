@@ -3,7 +3,7 @@ import bridge from '@vkontakte/vk-bridge';
 import { View, ScreenSpinner, AdaptivityProvider, AppRoot, ConfigProvider, SplitLayout, SplitCol } from '@vkontakte/vkui';
 import '@vkontakte/vkui/dist/vkui.css';
 
-import Home from './panels/Home';
+import Home from './panels/Home/index';
 import Selection from './panels/Selection';
 import Map from './panels/Map';
 import Main from './panels/Main';

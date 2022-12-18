@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
+<<<<<<< HEAD
 import { Panel, PanelHeader, PanelHeaderBack, Group, Button, Div, Text } from '@vkontakte/vkui';
 
 import selection from '../img/persik.png';
@@ -40,6 +41,21 @@ const Selection = (id, go) => {
 		</Panel>
 	)
 };
+=======
+import { Panel, PanelHeader, Header, Button, Group, Cell, Div, Avatar } from '@vkontakte/vkui';
+
+const Selection = ({ id, go, fetchedUser }) => (
+	<Panel id={id}>
+		<Group header={<Header>Самое приятное - достичь своих целей</Header>}>
+			<Div>
+				<Button stretched size="l" onClick={go} data-to="selection">
+					Поставить цель 
+				</Button>
+			</Div>
+		</Group>
+	</Panel>
+);
+>>>>>>> 1e112d6fc432c351687cc3ff332017ec0e8d7926
 
 Selection.propTypes = {
 	id: PropTypes.string.isRequired,
