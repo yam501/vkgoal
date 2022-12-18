@@ -8,7 +8,8 @@ import { Panel, PanelHeader, Header, Button, Group, Cell, Div, Avatar } from '@v
 
 import bg_url from './bg.png'
 
-const Home = ({ id, go, fetchedUser }) => (
+const Home = ({ id, go, fetchedUser }) => {
+	return (
 	<Panel id={id} >
 		<div className='header1'>
 			<div> </div>
@@ -18,8 +19,8 @@ const Home = ({ id, go, fetchedUser }) => (
 		<div className='main-container'>
 			<img className='main-container__bg' src={bg_url} />
 			<h1 className='main-container__title'>Самое приятное - достичь своих целей</h1>
-			<span data-to="selection" onClick={go}>
-				<div data-to="selection" onClick={go} className="cum-btn">
+			<span data-to="selecton" onClick={go}>
+				<div data-to="map" onClick={go} className="cum-btn">
 					<span>Поставить цель</span>
 					<PlayIcon
 						style={{ transform: "translateY(1px)" }}
@@ -28,7 +29,8 @@ const Home = ({ id, go, fetchedUser }) => (
 			</span>
 		</div>
 	</Panel>
-);
+	)
+	};
 
 Home.propTypes = {
 	id: PropTypes.string.isRequired,

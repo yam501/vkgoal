@@ -2,7 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import { Panel, PanelHeader, Header, Button, Group, Cell, Div, Avatar, text} from '@vkontakte/vkui';
-
+import { ReactComponent as DisplayIcon } from '../img/display.svg';
+import { ReactComponent as BrushIcon } from '../img/brush.svg';
+import { ReactComponent as BicycleIcon } from '../img/bicycle.svg';
+import { useState } from 'react';
+import './Map.css';
 
 
 const Map = (id, go) => {
