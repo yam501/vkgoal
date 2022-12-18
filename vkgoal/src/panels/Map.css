@@ -87,7 +87,7 @@
 .select_form {
     /* float: right; */
     position: relative;
-    top: 5px;
+    top: 10px;
     margin-right: 40px;
     display: flex;
     flex-direction: column;
@@ -96,8 +96,9 @@
 }
 
 .nomer_scrollbar{
-    width: 300px;
+    width: 350px;
     margin-bottom: 50px;
-    height: 4px;
+    height: 2px;
     background-color: #5070FB;   
+    
 }

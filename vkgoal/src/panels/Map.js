@@ -5,8 +5,9 @@ import { Panel, PanelHeader, Header, Button, Group, Cell, Div, Avatar, text} fro
 import { ReactComponent as DisplayIcon } from '../img/display.svg';
 import { ReactComponent as BrushIcon } from '../img/brush.svg';
 import { ReactComponent as BicycleIcon } from '../img/bicycle.svg';
-import { useState } from 'react';
+
 import './Map.css';
+
 const Map = (id, go) => {
 	const [active, setActive] = useState(0);
 	const [currentRange, setCurrentRange] = useState(100);
@@ -39,23 +40,23 @@ const Map = (id, go) => {
 					<h1 className='card_title'>{cardTitle}</h1>
 				</div>
 				<div className='slider'>
-					<a href='./Selection.js'><div  
+					<div  
 					onMouseEnter={() => setActive(1)}
 					className= {`select_card ${active === 1 ? 'active' : ''}`}>
 						<DisplayIcon className="card__icon" height={40} width={40} fill="#000" />
-					</div></a>
-					<a href='./Selection.js'><div 
+					</div>
+					<div 
 						onMouseEnter={() => setActive(0)}
 						// onMouseOut={() => setActive(3)}
 						className= {`select_card ${active === 0 ? 'active' : ''}`}>
 						<BrushIcon className="card__icon" height={40} width={40} fill="#000" />
-					</div></a>
-					<a href='./Selection.js'><div 
+					</div>
+					<div 
 						onMouseEnter={() => setActive(2)}
 						// onMouseOut={() => setActive(5)}
 						className= {`select_card ${active === 2 ? 'active' : ''}`}>
 						<BicycleIcon className="card__icon" height={40} width={40} fill="#000" />
-					</div></a>
+					</div>	
 					
 				</div>
 				<div className='select_form'>
