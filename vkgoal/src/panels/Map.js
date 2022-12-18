@@ -5,7 +5,7 @@ import { ReactComponent as DisplayIcon } from '../img/display.svg'
 import { ReactComponent as BrushIcon } from '../img/brush.svg'
 import { ReactComponent as BicycleIcon } from '../img/bicycle.svg' 
 
-import { Panel, PanelHeader, Header, Button, Group, Cell, Div, Avatar, img} from '@vkontakte/vkui';
+import { Panel, PanelHeader, Header, Button, Group, Cell, Div, Avatar, text} from '@vkontakte/vkui';
 
 
 
@@ -59,22 +59,9 @@ const Map = (id, go) => {
 					
 				</div>
 				<div className='select_form'>
-					<form>
-						<label for="days" className='form_label'>Количество дней</label>
-						<br />
-						<input type='range' min='1' max='365' className='range' id='days' />
-					</form>
-
-					<form>
-						<label for="hours" className='form_label'>Количество часов</label>
-						<br />
-						<input type='range' min='1' max='24' className='range' id='hours' />
-					</form>
-
-					<form>
-						<label for="minutes" className='form_label'>Количество минут</label>
-						<br />
-						<input type='range' min='1' max='60' className='range' id='minutes' value=''/>
+					<form className='form'>
+						<input type='range' min="1" max='365' className="range" oninput="rangenumber.value=value"/>
+  						<input type="number" id="rangenumber" min="1" max="365" step="1" value="45" oninput="range.value=value" />
 					</form>
 				</div>
 			</div>

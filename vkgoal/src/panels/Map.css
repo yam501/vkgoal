@@ -29,6 +29,7 @@
 }
 
 .slider {
+    width: fit-content;
     margin-top: 120px;
     display: flex;
     position: relative;
@@ -86,19 +87,10 @@
     margin-right: 40px;
 }
 
-form > input {
+.range{
     width: 300px;
     height: 4px;
     background-color: #5070FB;
 }
 
-form > input::after {
-    margin-top:34px;
 
-    content: '60';
-}
-
-form > input ::before {
-    margin-top: 5px;
-    content: '1';
-}
