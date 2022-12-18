@@ -1,28 +1,33 @@
-import React, { useState } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
+import './Home/styles.css'
+import bg_url from './secBg.png';
+import { ReactComponent as BackButton } from './lilCross.svg';
 
 
-import { Panel, PanelHeader, PanelHeaderBack, Group, Button, Div, Text } from '@vkontakte/vkui';
+import { Panel } from '@vkontakte/vkui';
 
-import './Selection.css';
-
-const Selection = (id, go) => {
-
-	const [active, setActive] = useState(0);
-
-	return (
-		<Panel id={id}>
-			<div className='header'>
-				<div> </div>
-				<span>vk goal</span>
-				<div> </div>
-			</div>
-			<div className='header_text'>Самое приятное - достичь своих</div>
+const Selection = ({ id, go, fetchedUser }) => (
+	<Panel id={id}>
+		<div className='header2'>
 			<div>
-			</div>
-		</Panel>
-	)
-};
+			<BackButton
+				style={{transform: "translateY(1px)"}}
+				height={20} width={20} fill="white" />
+				 </div>
+			<span>GOAL</span>
+			<div></div>
+		</div>
+		<div className='main-container'>
+			<img className='main-container__bg' src={bg_url} />
+			<span data-to="index" onClick={go}>
+				<div data-to="index" onClick={go} className="cum-btn1">
+					<span>Поставить цель</span>
+				</div>
+			</span>
+		</div>
+	</Panel>
+);
 
 Selection.propTypes = {
 	id: PropTypes.string.isRequired,
