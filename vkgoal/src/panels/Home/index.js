@@ -20,11 +20,10 @@ const Home = ({ id, go, fetchedUser }) => (
 			<h1 className='main-container__title'>Самое приятное - достичь своих целей</h1>
 			<span data-to="selection" onClick={go}>
 				<div data-to="selection" onClick={go} className="cum-btn">
-				<PlayIcon
-				style={{transform: "translateY(1px)"}}
-				height={20} width={20} fill="white" />
 					<span>Поставить цель</span>
-					
+					<PlayIcon
+						style={{ transform: "translateY(1px)" }}
+						height={20} width={20} fill="white" />
 				</div>
 			</span>
 		</div>
