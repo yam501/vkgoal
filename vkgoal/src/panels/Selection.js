@@ -8,7 +8,6 @@ import { ReactComponent as BackButton } from './lilCross.svg';
 import { Panel, PanelHeader, PanelHeaderBack, Group, Button, Div, Text } from '@vkontakte/vkui';
 
 
-
 const Selection = (id, go) => {
 
 	const [active, setActive] = useState(0);
