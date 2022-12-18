@@ -6,12 +6,14 @@ import '@vkontakte/vkui/dist/vkui.css';
 import Home from './panels/Home/index';
 import Selection from './panels/Selection';
 import Map from './panels/Map';
-import Main from './panels/Main';
+
+
+import './main.css';
 
 
 const App = () => {
 	const [scheme, setScheme] = useState('bright_light')
-	const [activePanel, setActivePanel] = useState('map');
+	const [activePanel, setActivePanel] = useState('home');
 	const [fetchedUser, setUser] = useState(null);
 	const [popout, setPopout] = useState();
 
@@ -44,7 +46,6 @@ const App = () => {
 								<Home id='index' fetchedUser={fetchedUser} go={go} />
 								<Selection id='selection' go={go} />
 								<Map id='map' go={go} />
-								<Main id='main' go={go} />
 							</View>
 						</SplitCol>
 					</SplitLayout>
